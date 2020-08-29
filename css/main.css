@@ -44,7 +44,7 @@ header {
 	align-items: center;
 	border-bottom: 3px solid #77a466;
 	flex-flow: row wrap;
-	flex: 100%;
+	width: 100%;
 	text-align: center;
 }
 
@@ -53,7 +53,7 @@ header h1 {
 	padding: 38px 20px 20px 20px;
 	font-size: 1.875em;
 	border-bottom: 3px solid #77a466;
-	flex: 100%;
+	width: 100%;
 }
 header h1 span {
 	color: #77a466;
@@ -61,7 +61,7 @@ header h1 span {
 
 header nav {
 	padding: 20px 0;
-	flex: 100%;
+	width: 100%;
 }
 header nav ul {
 	margin: 0;
@@ -114,7 +114,7 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	flex: 100%;
+	width: 100%;
 	border-top: 1px solid #eee;
 }
 
@@ -175,12 +175,26 @@ footer span {
 		padding: 0 20px;
 	}
 
-	.section-three {
-		padding-left: 20px;
-	}
 }
 
-@media all and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row nowrap;
+	}
+
+	header h1 {
+		width: 30%;
+		padding: 0;
+		border-bottom: none;
+		text-align: left;	
+	}
+
+	header nav {
+		width: 40%;
+	}
+
 	header nav ul {
 		display: flex;
 		justify-content: space-between;
